@@ -50,5 +50,5 @@ Get a certificate from you base64-encoded CSR :
 
 ## Reference
 
-[https://github.com/jsha/minica](https://github.com/jsha/minica)
-[https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)
+- [https://github.com/jsha/minica](https://github.com/jsha/minica)
+- [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)

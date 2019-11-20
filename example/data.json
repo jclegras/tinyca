@@ -1,0 +1,11 @@
+{
+    "dnsNames": [
+        "localhost",
+        "my.domain.com",
+        "example.com"
+    ],
+    "IPs": [
+        "127.0.0.1",
+        "172.26.2.2"
+    ]
+}

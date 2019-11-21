@@ -30,6 +30,13 @@ go build
 # go install
 ```
 
+You could run a container from the source code with these commands :
+
+```
+docker build . -t tinyca
+docker-compose up -d
+```
+
 ## Configuration
 
 The application is configurable with environment variables :

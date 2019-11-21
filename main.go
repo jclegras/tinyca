@@ -2,25 +2,34 @@ package main
 
 import (
 	"context"
-	"log"
+	"fmt"
 	"net/http"
 	"os"
 	"os/signal"
 	"time"
+
+	"github.com/jclegras/tinyca/common"
 
 	"github.com/gorilla/mux"
 	"github.com/jclegras/tinyca/router"
 )
 
 func main() {
+	log := common.GetLogger()
 	r := mux.NewRouter()
 
 	r.HandleFunc("/sign", router.SignHandler).Methods("POST")
 	r.HandleFunc("/signCSR", router.SignCsrHandler).Methods("POST")
 
+	port, portOverriden := os.LookupEnv("PORT")
+	if !portOverriden {
+		port = "8080"
+	}
+	log.Printf("Listening on port %s", port)
+
 	srv := &http.Server{
 		Handler:      r,
-		Addr:         "0.0.0.0:8080",
+		Addr:         fmt.Sprintf("0.0.0.0:%s", port),
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}

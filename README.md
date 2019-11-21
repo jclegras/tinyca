@@ -44,6 +44,7 @@ The application is configurable with environment variables :
  - **CAROOT** : change the directory which holds the couple key/cert for the CA (*default* : ~/.local/share/tinyca) ;
  - **KEYNAME** : change the CA key name with the given value (*default* : CAKey.pem) ;
  - **CRTNAME** : Change the CA certificate name with the given value (*default* : CACrt.pem)
+ - **PORT** : change the listening port (*default* : 8080)
 
 ## Examples
 

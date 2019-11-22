@@ -50,7 +50,7 @@ The application is configurable with environment variables :
 
 Get a key/certificate couple from your JSON request :
 
-`curl -X POST -H "Content-Type: application.json" -d @example/data.json "localhost:8080/sign"`
+`curl -X POST -H "Content-Type: application/json" -d @example/data.json "localhost:8080/sign"`
 
 Get a certificate from you base64-encoded CSR :
 
